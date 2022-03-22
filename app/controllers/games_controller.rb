@@ -3,9 +3,9 @@ class GamesController < ApplicationController
   end
 
   def new
-    @letters = LettersGenerator.new(9).generate_letters
+    @letters = LettersGenerator.call(9)
     respond_to do |format|
-      format.html
+      # format.html
       format.text { render partial: 'game.html' }
     end
   end
@@ -13,9 +13,9 @@ class GamesController < ApplicationController
   def result
     @attempt = params[:attempt].upcase
     @letters = params[:letters]
-    @valid_input = ValidateInput.new(input: @attempt, letters: @letters).validate
-    @valid_word = WordValidator.new(@attempt).validate
-    @best_answers = AnagramSolver.new(@letters.gsub(" ", "")).fetch
+    @valid_input = ValidateInput.call(input: @attempt, letters: @letters)
+    @valid_word = WordValidator.call(@attempt)
+    @best_answers = AnagramSolver.call(@letters.gsub(" ", ""))
     respond_to do |format|
       # format.html
       format.json

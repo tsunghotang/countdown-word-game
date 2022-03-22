@@ -1,11 +1,11 @@
 require 'open-uri'
 
-class AnagramSolver
+class AnagramSolver < ApplicationService
   def initialize(letters)
     @letters = letters
   end
 
-  def fetch
+  def call
     response = URI.open("https://countdown-word-game-api.herokuapp.com/solve/#{@letters}?variance=1")
     JSON.parse(response.read)
   end
