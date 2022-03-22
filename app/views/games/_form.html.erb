@@ -1,0 +1,13 @@
+<% if @letters %>
+  <%= form_with url:result_path, method: :post, class: 'form-inline', html: {data: { controller: 'timer', timer_target: 'form', game_result_target: 'form'} } do |f| %>
+    <div class="input-group">
+      <%= f.text_field :attempt, class: 'form-control mr-sm-2' %>
+      <%= f.hidden_field :letters, :value => @letters %>
+      <%= f.submit 'Submit', class: 'btn btn-success my-2 my-sm-0', data: { action: "click->game-result#result" } %>
+    </div>
+  <% end %>
+<% else %>
+  <%= form_with url:new_path, method: :get, html: {data: { start_game_target: 'form'} } do |f| %>
+    <%= f.submit 'Start', class: 'btn btn-primary', data: { action: "click->start-game#start" } %>
+   <% end %>
+<% end %>

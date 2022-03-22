@@ -1,0 +1,5 @@
+<%= render "letters.html.erb" %>
+<%= render "form.html.erb" %>
+<% if @letters.present? %>
+  <aside class="container answer-container" data-game-result-target="answer" data-timer-target="answer"></aside>
+<% end %>

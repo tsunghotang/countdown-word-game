@@ -90,5 +90,20 @@
     z-index: 5;
   }
 
+  .turn {
+    animation: turn 30s linear forwards;
+  }
 
+  .pause {
+    animation-play-state: paused;
+  }
+
+  @keyframes turn {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
 }

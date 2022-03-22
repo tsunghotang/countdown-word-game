@@ -1,1 +1,13 @@
 // Specific CSS for your home-page
+body {
+  background-color: #fef3c7;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+
+}
