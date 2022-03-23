@@ -7,26 +7,23 @@ export default class extends Controller {
     this.wakeupAPI
   }
 
-
   wakeupAPI() {
     fetch("https://countdown-word-game-api.herokuapp.com/")
+      .then(response => response.text())
   }
 
   start() {
     event.preventDefault()
+
     const url = this.formTarget.action
-    console.log(url)
     fetch(url, { headers: { 'Accept': 'text/plain' } })
       .then(response => response.text())
       .then((data) => {
         this.lettersTarget.outerHTML = data
       })
 
-      // this.formTarget.style.display = 'none'
       this.formTarget.outerHTML = ''
       this.dialTarget.classList.add('turn')
       this.audioTarget.play();
-
-
   }
 }

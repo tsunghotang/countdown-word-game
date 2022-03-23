@@ -5,7 +5,6 @@ export default class extends Controller {
 
   connect() {
     this.startTimer()
-    // console.log(this.answerTarget)
   }
 
   disconnect() {

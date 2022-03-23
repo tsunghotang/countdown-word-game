@@ -2,9 +2,7 @@ import { Controller } from "stimulus"
 
 export default class extends Controller {
   static targets = [ "form", "dial", "answer", "audio" ]
-  connect() {
-    console.log('timer!')
-  }
+
   result() {
     event.preventDefault()
     this.dialTarget.classList.add("pause")

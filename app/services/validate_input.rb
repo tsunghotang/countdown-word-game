@@ -6,6 +6,7 @@ class ValidateInput < ApplicationService
 
   def call
     return false if @input.empty?
+
     @input.chars.all? { |letter| @input.count(letter) <= @letters.count(letter) }
   end
 end
