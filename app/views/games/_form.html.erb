@@ -1,8 +1,8 @@
 <% if @letters %>
   <%= form_with url:result_path, method: :post, class: 'answer-form', html: {data: { controller: 'timer', timer_target: 'form', game_result_target: 'form'} } do |f| %>
-      <%= f.text_field :attempt, class: 'form-control' %>
-      <%= f.hidden_field :letters, :value => @letters %>
-      <%= f.button 'Submit', class: 'btn btn-success', data: { action: "click->game-result#result" } %>
+    <%= f.text_field :attempt, class: 'form-control' %>
+    <%= f.hidden_field :letters, :value => @letters %>
+    <%= f.button 'Submit', class: 'btn btn-success', data: { action: "click->game-result#result" } %>
   <% end %>
 <% else %>
   <%= form_with url:new_path, method: :get, html: {data: { start_game_target: 'form'} } do |f| %>
