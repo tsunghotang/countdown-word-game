@@ -1,11 +1,12 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "form", "dial", "answer", "audio" ]
+  static targets = [ "form", "dial", "answer", "audio", "highlight" ]
 
   result() {
     event.preventDefault()
     this.dialTarget.classList.add("pause")
+    this.highlightTarget.classList.add("pause")
     this.audioTarget.pause()
 
     const url = this.formTarget.action;

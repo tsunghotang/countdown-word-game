@@ -1,7 +1,7 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "form", "letters", "dial", "audio" ]
+  static targets = [ "form", "letters", "dial", "audio", "highlight" ]
 
   initialize() {
     this.wakeupAPI
@@ -24,6 +24,8 @@ export default class extends Controller {
 
       this.formTarget.outerHTML = ''
       this.dialTarget.classList.add('turn')
+      this.highlightTarget.classList.add('turn')
+
       this.audioTarget.play();
   }
 }

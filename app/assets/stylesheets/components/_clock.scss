@@ -81,12 +81,12 @@
 
   .hand {
     position: absolute;
-    top: 10px;
+    top: 0px;
     left: 120px;
-    border-bottom: 120px solid $blue;
+    border-bottom: 130px solid $blue;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    transform-origin: 10px 120px;
+    transform-origin: 10px 130px;
     z-index: 5;
   }
 
@@ -105,5 +105,30 @@
     100% {
       transform: rotate(180deg);
     }
+  }
+
+  .second-highlight {
+    background: radial-gradient(circle at center right, #FFFFE5, #FDF8BC);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 500px 0 0 500px;
+    z-index: 1;
+    transform-origin: center right;
+  }
+
+  .hide-highlight {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: white;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 300px 0 0 300px;
+    z-index: 2;
   }
 }
