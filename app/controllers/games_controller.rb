@@ -1,12 +1,13 @@
 class GamesController < ApplicationController
   def home
+    WakeApi.call
   end
 
   def new
     @letters = LettersGenerator.call(9)
     respond_to do |format|
       # format.html
-      format.text { render partial: 'game.html' }
+      format.text { render partial: 'game', formats: 'html' }
     end
   end
 

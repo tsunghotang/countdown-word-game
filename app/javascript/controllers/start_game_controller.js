@@ -3,14 +3,6 @@ import { Controller } from "stimulus"
 export default class extends Controller {
   static targets = [ "form", "letters", "dial", "audio", "highlight" ]
 
-  initialize() {
-    this.wakeupAPI
-  }
-
-  wakeupAPI() {
-    fetch("https://countdown-word-game-api.herokuapp.com/")
-      .then(response => response.text())
-  }
 
   start() {
     event.preventDefault()
