@@ -2,9 +2,11 @@
 <div class="answers">
   <% @best_answers.each do |word| %>
     <% if word['length'] == @best_answers.first['length'] %>
-      <%= link_to word["word"].capitalize, "https://www.merriam-webster.com/dictionary/#{word["word"]}", class: "best-answer answer", target: '_blank' %>
+      <%#= link_to word["word"].capitalize, "https://www.merriam-webster.com/dictionary/#{word["word"]}", class: "best-answer answer", target: '_blank' %>
+      <%= link_to word["word"].capitalize, "https://www.google.com/search?q=define+#{word["word"]}", class: "best-answer answer", target: '_blank' %>
     <% else %>
-        <%= link_to word["word"].capitalize, "https://www.merriam-webster.com/dictionary/#{word["word"]}", class: "answer", target: '_blank' %>
+        <%#= link_to word["word"].capitalize, "https://www.merriam-webster.com/dictionary/#{word["word"]}", class: "answer", target: '_blank' %>
+        <%= link_to word["word"].capitalize, "https://www.google.com/search?q=define+#{word["word"]}", class: "answer", target: '_blank' %>
     <% end %>
   <% end %>
 </div>

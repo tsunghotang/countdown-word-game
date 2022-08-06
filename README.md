@@ -1,1 +1,3 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+bugs
+  - using special characters causes undefined error to render on words and answer component
+  happnens when full stop is last character
