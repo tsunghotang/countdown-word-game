@@ -1,5 +1,7 @@
 <div class="output-red output">
-  <p><strong><%= @attempt %></strong></p>
+  <% if !@attempt.empty? %>
+    <p><strong><%= @attempt %></strong></p>
+  <% end %>
   <p>Wrong letters. Word not in dictionary.
 </p>
 </div>

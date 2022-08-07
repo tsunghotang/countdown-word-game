@@ -17,6 +17,7 @@ class GamesController < ApplicationController
     @valid_input = ValidateInput.call(input: @attempt, letters: @letters)
     @valid_word = WordValidator.call(@attempt)
     @best_answers = AnagramSolver.call(@letters.gsub(" ", ""))
+
     respond_to do |format|
       # format.html
       format.json
