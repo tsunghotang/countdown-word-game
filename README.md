@@ -1,5 +1,5 @@
 # Countdown Word Game
-A word game resembling the Channel 4 Countdown game show.
+Word game resembling the Channel 4 Countdown game show.
 
 The app is served by my [word-game-api](https://github.com/tsunghotang/word-game-api).
 
@@ -43,5 +43,6 @@ rails s
 - [Figma](https://www.figma.com) — Prototyping
 
 ## Todo
+ - load all results from the api and implement a button that shows more reuslts when clicked.
 ### Bugs
   - ~~Submitting a word with a period at the end causes the API to return 404 and causes the partials to return undefined.~~
