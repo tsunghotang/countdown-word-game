@@ -1,6 +1,8 @@
 # Countdown Word Game
 Word game resembling the Channel 4 Countdown game show.
 
+The Project is hosted on Heroku so initial load may take a while.
+
 The app is served by my [word-game-api](https://github.com/tsunghotang/word-game-api).
 
 This project was built in Rails to gain a better understanding and practical experience with StimulusJS, AJAX in Rails, JBuilder and Service Objects.
